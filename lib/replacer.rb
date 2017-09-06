@@ -2,19 +2,14 @@
 
 class Replacer
   def replacer(sentence,wordToFind,wordToReplace)
-    wordArr = sentence.split(' ')
-
-    for i in 0..wordArr.length-1 do
-      if wordArr[i] == wordToFind
-        wordArr[i] = wordToReplace
-      end
-    end
-    puts wordArr.join(' ')
-    wordArr.join(' ')
+    changed = sentence.gsub(/#{wordToFind}/, wordToReplace)
+    puts changed
+    return changed
   end
 end
 
 
+#first try
 # class Replacer
 #   def replacer(sentence,wordToFind,wordToReplace)
 #     wordArr = sentence.split(' ')
